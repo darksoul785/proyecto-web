@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/index-styles.css?v=<?php echo(rand()); ?>">
@@ -38,7 +37,7 @@
                             <a class="nav-link" href="login.php" style="color: white;">Iniciar sesion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: white;">Mi perfil</a>
+                            <a class="nav-link" href="perfil.php" style="color: white;">Mi perfil</a>
                         </li>
                     </ul>
                 </div>

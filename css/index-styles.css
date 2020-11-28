@@ -132,6 +132,15 @@
         padding: 60px 20px;
     }
 
+    .body-profile{
+        margin: 0;
+        padding: 0;
+        background: url(https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80);
+        background-size:cover;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        height: 100vh;
+    }
+
     .login-box img{
         width: 150px;
         height: 150px;
@@ -173,7 +182,7 @@
     .register-box{
         margin-top: 25px;
         width: 450px;
-        height: 685px;
+        height: 700px;
         background: #ddd9d9;
         color: rgb(8, 8, 8);
         top: 50%;
@@ -217,4 +226,17 @@
         text-align: center;
         font-size: 30px;
         color: brown;
+    }
+
+    .profile-box{
+        width: 500px;
+        height: 100%;;
+        background:rgb(197, 197, 221);
+        color: rgb(8, 8, 8);
+        top: 50%;
+        left: 20%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        padding: 100px 50px;
     }

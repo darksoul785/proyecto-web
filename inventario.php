@@ -6,7 +6,7 @@
     }
     else
     {  
-           echo "No tienes permiso para entrar a esta pagina <br>"?> <a class='nav-link' href='login.php'> inicia Sesion </a> <?php ;
+           echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link' href='login.php'> inicia Sesion </a> <?php ;
            exit();
     }  
 ?>

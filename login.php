@@ -54,7 +54,7 @@
                 <img src="img/mds-logo.png" alt="mds-logo">
                 <h4>Login</h4>
 
-                <form action="controlador/login.php" method="POST">
+                <form action="conexion/log.php" method="POST">
                     <label for="username">Usuario</label>
                     <input type="email" name="user" placeholder="Ingresa tu correo" autofocus>
 

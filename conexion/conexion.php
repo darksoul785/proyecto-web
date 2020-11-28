@@ -48,7 +48,7 @@ class conexion{
             header("location: ../index.php");
         }
         else{
-            echo 'Usuario o Contraseña incorrectos';
+            echo "<script> alert('Usuario o contraseña incorrectos!'); </script>";
         }  
     }
 }
