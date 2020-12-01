@@ -158,19 +158,19 @@
         color: brown;
     }
 
-    .login-box label, .register-box label, .contact-box label{
+    .login-box label, .register-box label, .contact-box label, .material-box{
         margin: 0;
         padding: 0;
         font-weight: bold;
         display: block;
     }
     
-    .login-box input, .register-box input, .contact-box input{
+    .login-box input, .register-box input, .contact-box input, .material-box input{
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .login-box input[type='text'],.login-box input[type='password'],.login-box input[type='email'],.register-box input[type='email'],.register-box input[type='password'], .register-box input[type='text'], .contact-box input[type='text'], .contact-box input[type='email']{
+    .material-box input[type="text"], .login-box input[type='text'],.login-box input[type='password'],.login-box input[type='email'],.register-box input[type='email'],.register-box input[type='password'], .register-box input[type='text'], .contact-box input[type='text'], .contact-box input[type='email']{
         border: none;
         border-bottom: 1px solid #000000;
         background: transparent;
@@ -239,4 +239,33 @@
         transform: translate(-50%,-50%);
         box-sizing: border-box;
         padding: 100px 50px;
+    }
+
+    .material-box{
+        margin-top: 25px;
+        width: 400px;
+        height: 700px;
+        background: #ddd9d9;
+        color: rgb(8, 8, 8);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 20px 20px;
+    }
+
+    .material-box input[type='submit']{
+        color: #fff;
+        background: #00b8eb;
+        border-radius: 3px;
+        margin-top: 15px;
+        }
+
+    .material-box h4{
+        margin: 0;
+        padding: 0 0 10px;
+        text-align: center;
+        font-size: 30px;
+        color: brown;
     }
