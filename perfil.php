@@ -57,9 +57,10 @@
                     este es tu perfil!
                 </p>
             <?php
-            echo "<p> Nombre del empleado </p> <br>";
-            echo $_SESSION['id']; echo "<br>";
+            echo "<p> Nombre del empleado:  <br>";
+            echo "<br>Email: <br>";
             echo $_SESSION['email'];
+            echo "<br>Area: <br>";
             echo $_SESSION['UserType'];
             ?>
         </div>

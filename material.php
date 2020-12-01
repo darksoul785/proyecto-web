@@ -60,6 +60,26 @@
                 </div>
             </div>
         </nav>
+        <div class="material-box">
+            <h4>solicitar material</h4>
+            <form action="material.php" method="POST">
+
+                <label for="nombre">Nombre</Label> <br>
+                <input type="text" autofocus><br>
+
+                <label for="Empleado">Numero de Empleado</label><br>
+                <input type="text"><br>
+
+                <label for="componente">Nombre del componente</label><br>
+                <input type="text"><br>
+
+                <label for="cantidad">Cantidad</label><br>
+                <input type="text"> <br>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </form>
+        </div>
     </div>
 </body>
 

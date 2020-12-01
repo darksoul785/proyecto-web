@@ -48,10 +48,13 @@
             <form action="">
                 <label for="">Nombre</label>
                 <input type="text" placeholder="Nombre">
+
                 <label for="">Correo</label>
                 <input type="email" placeholder="Email">
+
                 <label for="">Asunto</label>
                 <input type="text" placeholder="Asunto">
+                
                 <label for="">Mensaje</label>
                 <textarea name="" id="" cols="50" rows="5"></textarea>
                 <input type="submit" value="Enviar">

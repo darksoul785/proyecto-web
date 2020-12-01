@@ -8,6 +8,7 @@ class conexion{
     private $db = 'mds';
     private $usuario;
     private $password;
+    private $Type;
 
     public function __construct(){
         $this -> conexion = new mysqli($this-> server, $this ->user, $this->pass, $this->db);
@@ -43,11 +44,6 @@ class conexion{
             $_SESSION['id'] = $row['IdUser'];
             $_SESSION['email'] = $row['Email'];
             $_SESSION['UserType'] = $row['UserType'];
-
-                if($_SESSION['UserType'] == 'Tecnico'){
-                     $_SESSION['name'] = $
-                }
-            
             echo 'Has iniciado Sesion';
             echo $_SESSION['id'];
             echo $_SESSION['email'];
