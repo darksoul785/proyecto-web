@@ -1,6 +1,6 @@
-<!--<?php
+<?php
     session_start();
-
+    $comodin = $_SESSION['email'];
     if(isset($_SESSION['email']) and $_SESSION['estado'] == 'Autenticado')
     {
     }
@@ -9,9 +9,10 @@
            echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link' href='login.php'> inicia Sesion </a> <?php ;
            exit();
     }  
-?> -->
+?> 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/index-styles.css?v=<?php echo(rand()); ?>">
@@ -24,6 +25,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <title>Mi perfil</title>
 </head>
+
 <body>
     <div class="body-profile">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -52,18 +54,33 @@
             </div>
         </nav>
         <div class="profile-box">
-            <h4>Informacion del usuario </h4>
-                <p>
-                    este es tu perfil!
-                </p>
+            <h4> Hola <?php echo $_SESSION['email']; ?> </h4>
+            <p>
+               <b> Datos Registrados. </b>
+            </p>
             <?php
+            $conexion=mysqli_connect('localhost','root','','mds');
+            $consulta="SELECT IdUser from users where Email = '$comodin'";
+            $resultado=mysqli_query($conexion,$consulta);
+
+
+            echo $resultado;
             echo "<p> Nombre del empleado:  <br>";
             echo "<br>Email: <br>";
             echo $_SESSION['email'];
             echo "<br>Area: <br>";
             echo $_SESSION['UserType'];
+
+            if($_SESSION['UserType'] == "Tecnico")
+            {
+                echo "Consulta SQL a la tabla Technician";
+            } else {
+                echo "Consulta SQL a la tabla storer";
+            }
+
             ?>
         </div>
     </div>
 </body>
+
 </html>

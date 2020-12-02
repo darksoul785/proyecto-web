@@ -6,7 +6,8 @@
     }
     else
     {  
-           echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link' href='login.php'> inicia Sesion </a> <?php ;
+           echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link'
+    href='login.php'> inicia Sesion </a> <?php ;
            exit();
     }  
 ?>
@@ -28,33 +29,36 @@
 
 <body>
     <div class="body-inv">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.php" style="color: white;">MDS</a>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.php" style="color: white;">MDS</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data- target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria- label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-
+                    target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-
+                    label="Toggle navigation">
 
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.php" style="color: white;">Reportar problema</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="material.php" style="color: white;">Solicitar material</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php" style="color: white;">Iniciar sesion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="perfil.php" style="color: white;">Mi perfil</a>
-                    </li>
-                </ul>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.php" style="color: white;">Reportar problema</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="material.php" style="color: white;">Solicitar material</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php" style="color: white;">Iniciar sesion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="perfil.php" style="color: white;">Mi perfil</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+
+        
     </div>
 </body>
 

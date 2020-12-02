@@ -1,3 +1,16 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['email']) and $_SESSION['estado'] == 'Autenticado')
+    {
+    }
+    else
+    {  
+           echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link'
+    href='login.php'> inicia Sesion </a> <?php ;
+           exit();
+    }  
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,9 +67,12 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
 
-                <img class="d-block w-100" src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="First slide">
-
+                <img class="d-block w-100"
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                    alt="First slide">
+                
                 <div class="carousel-caption d-none d-md-block">
+                    <h1> Bienvenido <?php echo $_SESSION['UserType']; ?> </h1>
                     <h5>Enfocados en la calidad.</h5>
                     <p>“Comienza haciendo lo que es necesario, después lo que es posible y
                         de repente estarás haciendo lo imposible.”</p>

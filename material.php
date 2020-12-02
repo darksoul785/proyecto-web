@@ -64,12 +64,6 @@
             <h4>solicitar material</h4>
             <form action="material.php" method="POST">
 
-                <label for="nombre">Nombre</Label> <br>
-                <input type="text" autofocus><br>
-
-                <label for="Empleado">Numero de Empleado</label><br>
-                <input type="text"><br>
-
                 <label for="componente">Nombre del componente</label><br>
                 <input type="text"><br>
 

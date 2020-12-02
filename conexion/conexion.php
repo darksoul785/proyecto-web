@@ -8,7 +8,6 @@ class conexion{
     private $db = 'mds';
     private $usuario;
     private $password;
-    private $Type;
 
     public function __construct(){
         $this -> conexion = new mysqli($this-> server, $this ->user, $this->pass, $this->db);
@@ -30,17 +29,18 @@ class conexion{
         $this -> usuario = $usuario;
         $this -> password = $password;
         $query = "select IdUser, Email, UserType, Password from users where Email = '".$this->usuario."'and Password = '".$this->password."'";
-        $queryT = "select Name, LastName, MLastName, TechnicianNo from technician";
-        $queryS = "select Name, LastName, MLastName, StorerNo from storer";
+        //$queryT = "select Name, LastName, MLastName, TechnicianNo from technician";
+        //$queryS = "select Name, LastName, MLastName, StorerNo from storer";
 
         $consulta = $this -> conexion -> query($query);
-        $consultaT = $this -> conexion -> query($queryT);
-        $consultaS = $this -> conexion -> query($queryS);
+
+
+        //$consultaT = $this -> conexion -> query($queryT);
+        //$consultaS = $this -> conexion -> query($queryS);
 
         if($row = mysqli_fetch_array($consulta)){
             session_start();
             $_SESSION['estado'] = 'Autenticado';
-
             $_SESSION['id'] = $row['IdUser'];
             $_SESSION['email'] = $row['Email'];
             $_SESSION['UserType'] = $row['UserType'];
