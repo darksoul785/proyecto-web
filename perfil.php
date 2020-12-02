@@ -6,10 +6,11 @@
     }
     else
     {  
-           echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link' href='login.php'> inicia Sesion </a> <?php ;
+           echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link'
+    href='login.php'> inicia Sesion </a> <?php ;
            exit();
     }  
-?> 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,29 +56,62 @@
         </nav>
         <div class="profile-box">
             <h4> Hola <?php echo $_SESSION['email']; ?> </h4>
-            <p>
-               <b> Datos Registrados. </b>
-            </p>
+            <h2>
+                <b> Datos Registrados. </b>
+            </h2>
             <?php
             $conexion=mysqli_connect('localhost','root','','mds');
             $consulta="SELECT IdUser from users where Email = '$comodin'";
             $resultado=mysqli_query($conexion,$consulta);
 
 
-            echo $resultado;
-            echo "<p> Nombre del empleado:  <br>";
-            echo "<br>Email: <br>";
-            echo $_SESSION['email'];
-            echo "<br>Area: <br>";
-            echo $_SESSION['UserType'];
+            while($mostrar=mysqli_fetch_array($resultado))
 
-            if($_SESSION['UserType'] == "Tecnico")
+            $ID = $mostrar['IdUser'];
+
+            $CTec="SELECT * from Technician where FkUser = $ID";
+            $CStorer="SELECT * from Storer where FkUser = $ID";
+
+        if($_SESSION['UserType'] == "Tecnico")
             {
-                echo "Consulta SQL a la tabla Technician";
-            } else {
-                echo "Consulta SQL a la tabla storer";
-            }
+               $resTec=mysqli_query($conexion,$CTec);
+               while($mostrar1=mysqli_fetch_array($resTec)){
 
+                echo "<h3> Nombre del empleado:  </h3>";
+                echo $mostrar1['Name'];
+                echo "<h3> Apellido Paterno:  </h3>";
+                echo $mostrar1['LastName'];
+                echo "<h3> Apellido Materno:  </h3>";
+                echo $mostrar1['MLastName'];
+                echo "<h3>Email:  </h3>";
+                echo $comodin;
+                echo "<h3>Area: </h3>";
+                echo  $_SESSION['UserType'];
+                echo "Matricula";
+                echo "<h1>".$mostrar1['TechnicianNo'],"</h1>";
+               }
+
+            } 
+            if($_SESSION['UserType'] == "Almacenista") 
+            {
+
+                $resStorer=mysqli_query($conexion,$CStorer);
+                while($mostrar2=mysqli_fetch_array($resStorer)){
+
+                    echo "<h3> Nombre del empleado:  </h3>";
+                    echo $mostrar2['Name'];
+                    echo "<h3> Apellido Paterno:  </h3>";
+                    echo $mostrar2['LastName'];
+                    echo "<h3> Apellido Materno:  </h3>";
+                    echo $mostrar2['MLastName'];
+                    echo "<h3>Email:  </h3>";
+                    echo $comodin;
+                    echo "<h3>Area: </h3>";
+                    echo  $_SESSION['UserType'];
+                    echo "Matricula";
+                    echo "<h1>".$mostrar2['StorerNo'],"</h1>";
+                }
+            }
             ?>
         </div>
     </div>
