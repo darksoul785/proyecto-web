@@ -78,17 +78,17 @@
                while($mostrar1=mysqli_fetch_array($resTec)){
 
                 echo "<h3> Nombre del empleado:  </h3>";
-                echo $mostrar1['Name'];
+                echo "<h4>".$mostrar1['Name']."</h4>";
                 echo "<h3> Apellido Paterno:  </h3>";
-                echo $mostrar1['LastName'];
+                echo "<h4>".$mostrar1['LastName']."</h4>";
                 echo "<h3> Apellido Materno:  </h3>";
-                echo $mostrar1['MLastName'];
+                echo "<h4>".$mostrar1['MLastName']."</h4>";
                 echo "<h3>Email:  </h3>";
-                echo $comodin;
+                echo "<h4>".$comodin."</h4>";
                 echo "<h3>Area: </h3>";
-                echo  $_SESSION['UserType'];
+                echo  "<h4>".$_SESSION['UserType']."</h4>";
                 echo "Matricula";
-                echo "<h1>".$mostrar1['TechnicianNo'],"</h1>";
+                echo "<h4>".$mostrar1['TechnicianNo'],"</h4>";
                }
 
             } 
@@ -99,17 +99,17 @@
                 while($mostrar2=mysqli_fetch_array($resStorer)){
 
                     echo "<h3> Nombre del empleado:  </h3>";
-                    echo $mostrar2['Name'];
-                    echo "<h3> Apellido Paterno:  </h3>";
-                    echo $mostrar2['LastName'];
-                    echo "<h3> Apellido Materno:  </h3>";
-                    echo $mostrar2['MLastName'];
-                    echo "<h3>Email:  </h3>";
-                    echo $comodin;
-                    echo "<h3>Area: </h3>";
-                    echo  $_SESSION['UserType'];
-                    echo "Matricula";
-                    echo "<h1>".$mostrar2['StorerNo'],"</h1>";
+                echo "<h4>".$mostrar1['Name']."</h4>";
+                echo "<h3> Apellido Paterno:  </h3>";
+                echo "<h4>".$mostrar1['LastName']."</h4>";
+                echo "<h3> Apellido Materno:  </h3>";
+                echo "<h4>".$mostrar1['MLastName']."</h4>";
+                echo "<h3>Email:  </h3>";
+                echo "<h4>".$comodin."</h4>";
+                echo "<h3>Area: </h3>";
+                echo  "<h4>".$_SESSION['UserType']."</h4>";
+                echo "Matricula";
+                echo "<h4>".$mostrar1['TechnicianNo'],"</h4>";
                 }
             }
             ?>
