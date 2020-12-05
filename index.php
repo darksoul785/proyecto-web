@@ -70,8 +70,21 @@
                 <img class="d-block w-100"
                     src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                     alt="First slide">
-                
+
                 <div class="carousel-caption d-none d-md-block">
+                    <div class="textBox">
+                        <img src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1949&q=80"
+                            width="350" height="400" alt="imagen1">
+                        <div class="txt">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores veniam non ad
+                            maiores laudantium possimus aspernatur ullam saepe vero autem pariatur cumque voluptas
+                            omnis, reprehenderit totam natus, modi laborum. Tempora. Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Non temporibus corrupti a possimus incidunt vitae nam
+                            exercitationem minima, illo, magni cumque excepturi magnam mollitia eius laudantium,
+                            laborum
+                            id expedita natus?
+                        </div>
+                    </div>
                     <h1> Bienvenido <?php echo $_SESSION['UserType']; ?> </h1>
                     <h5>Enfocados en la calidad.</h5>
                     <p>“Comienza haciendo lo que es necesario, después lo que es posible y
@@ -86,6 +99,19 @@
 1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Second slide">
 
                 <div class="carousel-caption d-none d-md-block">
+                    <div class="textBox">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            width="350" height="400" alt="imagen1">
+                        <div class="txt">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores veniam non ad
+                            maiores laudantium possimus aspernatur ullam saepe vero autem pariatur cumque voluptas
+                            omnis, reprehenderit totam natus, modi laborum. Tempora. Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Non temporibus corrupti a possimus incidunt vitae nam
+                            exercitationem minima, illo, magni cumque excepturi magnam mollitia eius laudantium,
+                            laborum
+                            id expedita natus?
+                        </div>
+                    </div>
                     <h5>Enfocados en la calidad.</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla,
                         tempore. Deserunt excepturi quas vero.</p>
@@ -98,6 +124,19 @@
 1.2.1&auto=format&fit=crop&w=1374&q=80" alt="Third slide">
 
                 <div class="carousel-caption d-none d-md-block">
+                    <div class="textBox">
+                        <img src="https://images.unsplash.com/photo-1522735338363-cc7313be0ae0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80"
+                            width="350" height="400" alt="imagen1">
+                        <div class="txt">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores veniam non ad
+                            maiores laudantium possimus aspernatur ullam saepe vero autem pariatur cumque voluptas
+                            omnis, reprehenderit totam natus, modi laborum. Tempora. Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Non temporibus corrupti a possimus incidunt vitae nam
+                            exercitationem minima, illo, magni cumque excepturi magnam mollitia eius laudantium,
+                            laborum
+                            id expedita natus?
+                        </div>
+                    </div>
                     <h5>Enfocados en la calidad.</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla,
                         tempore. Deserunt excepturi quas vero.</p>

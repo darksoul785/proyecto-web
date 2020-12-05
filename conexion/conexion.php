@@ -5,7 +5,7 @@ class conexion{
     private $server = 'localhost';
     private $user = 'root';
     private $pass = '';
-    private $db = 'mds';
+    private $db = 'mds2';
     private $usuario;
     private $password;
 
@@ -22,6 +22,8 @@ class conexion{
     public function cerrar(){
 
         $this -> conexion-> close();
+
+        $this -> conexion -> mysqli_close();
 
     }
     public function login($usuario, $password){

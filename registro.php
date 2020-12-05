@@ -1,41 +1,3 @@
-<?php
-    session_start();
-    session_destroy();
-    error_reporting(0);
-
-    $conn = mysqli_connect('localhost','root','','mds');
-    if(isset($_POST['email'])){
-        $email = $_POST['email'];
-    }
-    if(isset($_POST['pass'])){
-        $pass = $_POST['pass'];
-    }
-    if(isset($_POST['Type'])){
-        $UserType = $_POST['Type'];
-    }
-    if(isset($_POST['nombre'])){
-        $nombre = $_POST['nombre'];
-    }
-    if(isset($_POST['apellidoP'])){
-        $apellidop = $_POST['apellidoP'];
-    }
-    if(isset($_POST['apellidoM'])){
-        $apellidom = $_POST['apellidoM'];
-    }
-    $sql1 = "insert into users(IdUser, Password,Email, UserType) values('null','$pass','$email',$UserType)";
-    $execute = mysqli_query($conn,$sql1);
-    if($UserType == 1){
-        $TechNo = rand(2000,2999);
-        $sql2 = "insert into technician (IdTechnician, Name, LastName, MLastName,TechnicianNo) values('null', '$nombre','$apellidop','$apellidom','$TechNo')";
-        $execute2 = mysqli_query($conn,$sql2);
-    }
-    elseif($UserType == 2){
-        $StorerNo = rand(6000,6999);
-        $sql2 = "insert into storer (IdStorer, Name, LastName, MLastName,StorerNo) values('null', '$nombre','$apellidop','$apellidom','$StorerNo')";
-        $execute2 = mysqli_query($conn,$sql2);
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,6 +71,48 @@
 
                 <a href="login.php">¿ya tienes una cuenta? Inicia Sesion</a>
             </form>
+            <script>
+            <?php
+                include ("conexion/conexion2.php");
+                session_start();
+                session_destroy();
+                error_reporting(0);
+
+                $conn = mysqli_connect('localhost','root','','mds2');
+                if(isset($_POST['email'])){
+                    $email = $_POST['email'];
+                }
+                if(isset($_POST['pass'])){
+                    $pass = $_POST['pass'];
+                }
+                if(isset($_POST['Type'])){
+                    $UserType = $_POST['Type'];
+                }
+                if(isset($_POST['nombre'])){
+                    $nombre = $_POST['nombre'];
+                }
+                if(isset($_POST['apellidoP'])){
+                    $apellidop = $_POST['apellidoP'];
+                }
+                if(isset($_POST['apellidoM'])){
+                    $apellidom = $_POST['apellidoM'];
+                }
+                $sql1 = "insert into users(IdUser, Password,Email, UserType) values('null','$pass','$email',$UserType)";
+                $execute = mysqli_query($conn,$sql1);
+
+                if($UserType == 1){
+                    $TechNo = rand(2000,2999);
+                    $sql2 = "insert into technician (IdTechnician, Name, LastName, MLastName,TechnicianNo,email) values('null', '$nombre','$apellidop','$apellidom','$TechNo','$email')";
+                    $execute2 = mysqli_query($conn,$sql2);
+                }
+                elseif($UserType == 2){
+                    $StorerNo = rand(6000,6999);
+                    $sql2 = "insert into storer (IdStorer, Name, LastName, MLastName,StorerNo, email) values('null','$apellidop','$apellidom','$StorerNo','$email')";
+                    $execute2 = mysqli_query($conn,$sql2);
+                }
+
+            ?>
+            </script>
         </div>
     </div>
 </body>
