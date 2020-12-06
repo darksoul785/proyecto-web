@@ -69,6 +69,7 @@
 
             $ID = $mostrar['IdUser'];
 
+<<<<<<< HEAD
             $CTec="SELECT * from technician where FkUser = '$ID'";
             $CStorer="SELECT * from storer where Fkuser = '$ID'";
 
@@ -128,6 +129,51 @@
                     echo "Estatus: ". $estatus."<br>";
                     echo "---------------------------<br>";
                 }
+=======
+            $CTec="SELECT * from Technician where FkUser = $ID";
+            $CStorer="SELECT * from Storer where FkUser = $ID";
+
+        if($_SESSION['UserType'] == "Tecnico")
+            {
+               $resTec=mysqli_query($conexion,$CTec);
+               while($mostrar1=mysqli_fetch_array($resTec)){
+
+                echo "<h3> Nombre del empleado:  </h3>";
+                echo $mostrar1['Name'];
+                echo "<h3> Apellido Paterno:  </h3>";
+                echo $mostrar1['LastName'];
+                echo "<h3> Apellido Materno:  </h3>";
+                echo $mostrar1['MLastName'];
+                echo "<h3>Email:  </h3>";
+                echo $comodin;
+                echo "<h3>Area: </h3>";
+                echo  $_SESSION['UserType'];
+                echo "Matricula";
+                echo "<h1>".$mostrar1['TechnicianNo'],"</h1>";
+               }
+
+            } 
+            if($_SESSION['UserType'] == "Almacenista") 
+            {
+
+                $resStorer=mysqli_query($conexion,$CStorer);
+                while($mostrar2=mysqli_fetch_array($resStorer)){
+
+                    echo "<h3> Nombre del empleado:  </h3>";
+                    echo $mostrar2['Name'];
+                    echo "<h3> Apellido Paterno:  </h3>";
+                    echo $mostrar2['LastName'];
+                    echo "<h3> Apellido Materno:  </h3>";
+                    echo $mostrar2['MLastName'];
+                    echo "<h3>Email:  </h3>";
+                    echo $comodin;
+                    echo "<h3>Area: </h3>";
+                    echo  $_SESSION['UserType'];
+                    echo "Matricula";
+                    echo "<h1>".$mostrar2['StorerNo'],"</h1>";
+                }
+            }
+>>>>>>> main
             ?>
         </div>
     </div>
