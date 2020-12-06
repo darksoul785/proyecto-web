@@ -69,26 +69,22 @@
 
             $ID = $mostrar['IdUser'];
 
-            $CTec="SELECT * from technician where email = '$comodin'";
-            $CStorer="SELECT * from storer where email = '$comodin'";
+            $CTec="SELECT * from technician where FkUser = '$ID'";
+            $CStorer="SELECT * from storer where Fkuser = '$ID'";
 
         if($_SESSION['UserType'] == "Admin")
             {
                $resTec=mysqli_query($conexion,$CTec);
                while($mostrar1=mysqli_fetch_array($resTec)){
 
-                echo "<h3> Nombre del empleado:  </h3>";
-                echo "<h4>".$mostrar1['Name']."</h4>";
-                echo "<h3> Apellido Paterno:  </h3>";
-                echo "<h4>".$mostrar1['LastName']."</h4>";
-                echo "<h3> Apellido Materno:  </h3>";
-                echo "<h4>".$mostrar1['MLastName']."</h4>";
-                echo "<h3>Email:  </h3>";
-                echo "<h4>".$comodin."</h4>";
-                echo "<h3>Area: </h3>";
-                echo  "<h4>".$_SESSION['UserType']."</h4>";
-                echo "Matricula";
-                echo "<h4>".$mostrar1['TechnicianNo'],"</h4>";
+                   echo "<h3> Nombre del empleado:  </h3>";
+                   echo "<h4>".$mostrar1['Name']." ".$mostrar1['LastName']." ".$mostrar1['MLastName']."</h4> <br>";
+                   echo "<h3>Email:  </h3>";
+                   echo "<h4>".$comodin."</h4> <br>";
+                   echo "<h3>Area: </h3>";
+                   echo  "<h4>".$_SESSION['UserType']."</h4><br>";
+                   echo "<h3>Matricula</h3>";
+                   echo "<h4>".$mostrar1['TechnicianNo'],"</h4>";
                }
 
             } 
@@ -99,19 +95,39 @@
                 while($mostrar2=mysqli_fetch_array($resStorer)){
 
                     echo "<h3> Nombre del empleado:  </h3>";
-                echo "<h4>".$mostrar1['Name']."</h4>";
-                echo "<h3> Apellido Paterno:  </h3>";
-                echo "<h4>".$mostrar1['LastName']."</h4>";
-                echo "<h3> Apellido Materno:  </h3>";
-                echo "<h4>".$mostrar1['MLastName']."</h4>";
-                echo "<h3>Email:  </h3>";
-                echo "<h4>".$comodin."</h4>";
-                echo "<h3>Area: </h3>";
-                echo  "<h4>".$_SESSION['UserType']."</h4>";
-                echo "Matricula";
-                echo "<h4>".$mostrar1['TechnicianNo'],"</h4>";
+                    echo "<h4>".$mostrar1['Name']." ".$mostrar1['LastName']." ".$mostrar1['MLastName']."</h4> <br>";
+                    echo "<h3> Apellido Materno:  </h3>";
+                    echo "<h4>".$mostrar1['MLastName']."</h4><br>";
+                    echo "<h3>Email:  </h3>";
+                    echo "<h4>".$comodin."</h4><br>";
+                    echo "<h3>Area: </h3>";
+                    echo  "<h4>".$_SESSION['UserType']."</h4><br>";
+                    echo "<h3>Matricula: </h3>";
+                    echo "<h4>".$mostrar1['TechnicianNo'],"</h4>";
                 }
             }
+            ?>
+        </div>
+        <div class="order-box">
+            <h4> Ordenes pendientes </h4>
+            <?php
+                $consulta2 = "select * from reports where FkTechnician = '$ID'";
+                $resultado2 = mysqli_query($conexion,$consulta2);
+
+                while($row = mysqli_fetch_array($resultado2)){
+                    
+                    if($row['Solved'] == 0){
+                        $estatus = "pendiente";
+                    }
+                    else{
+                        $estatus = "resuelto";
+                    }
+
+                    echo "Numero de reporte: ". $row['IdReport']."<br>";
+                    echo "Motivo: ". $row['Reason']."<br>";
+                    echo "Estatus: ". $estatus."<br>";
+                    echo "---------------------------<br>";
+                }
             ?>
         </div>
     </div>

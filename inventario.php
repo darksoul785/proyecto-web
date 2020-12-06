@@ -9,7 +9,8 @@
            echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link'
     href='login.php'> inicia Sesion </a> <?php ;
            exit();
-    }  
+    }
+    $conexion = mysqli_connect('localhost','root','','mds2');  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,6 +59,42 @@
             </div>
         </nav>
 
+    <div class="invent-box">
+        <div class="table">
+            <caption><b>Material disponible en almacen</b></caption>
+            <table  cellspacing = "5" cellpading = "5"  border = "1">
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Cantidad
+                    </th>
+                    <th>
+                        Disponibilidad
+                    </th>
+                </tr>
+
+                <tr>
+                    <?php
+                        $sql = "select * from components";
+                        $result = mysqli_query($conexion,$sql);
+
+                        while($mostrar = mysqli_fetch_array($result)){
+                            ?>
+                    <td><?php echo $mostrar['Name']?></td>
+                    <td><?php echo $mostrar['Amount']?></td>
+                    <td><?php echo $mostrar['IsAvailable']?></td>
+
+                </tr>
+                    <?php
+                        }
+                    ?>
+            </table>
+
+        </div>
+
+    </div>
         
     </div>
 </body>

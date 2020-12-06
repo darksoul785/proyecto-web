@@ -6,9 +6,6 @@
     }
     else
     {  
-           echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link'
-    href='login.php'> inicia Sesion </a> <?php ;
-           exit();
     }  
 ?>
 <!DOCTYPE html>
@@ -76,13 +73,11 @@
                         <img src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1949&q=80"
                             width="350" height="400" alt="imagen1">
                         <div class="txt">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores veniam non ad
-                            maiores laudantium possimus aspernatur ullam saepe vero autem pariatur cumque voluptas
-                            omnis, reprehenderit totam natus, modi laborum. Tempora. Lorem ipsum dolor sit, amet
-                            consectetur adipisicing elit. Non temporibus corrupti a possimus incidunt vitae nam
-                            exercitationem minima, illo, magni cumque excepturi magnam mollitia eius laudantium,
-                            laborum
-                            id expedita natus?
+                            La disrupción acelerada de los nuevos competidores, las expectativas de los clientes que
+                            cambian rápidamente y las innovaciones que cambian el juego que surgen con mayor velocidad:
+                            estas demandas impulsan la necesidad de un desarrollo de productos extremadamente ágil y la
+                            capacidad de llevar productos innovadores al mercado de la manera más rápida y confiable
+                            posible.
                         </div>
                     </div>
                     <h1> Bienvenido <?php echo $_SESSION['UserType']; ?> </h1>
@@ -103,18 +98,15 @@
                         <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
                             width="350" height="400" alt="imagen1">
                         <div class="txt">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores veniam non ad
-                            maiores laudantium possimus aspernatur ullam saepe vero autem pariatur cumque voluptas
-                            omnis, reprehenderit totam natus, modi laborum. Tempora. Lorem ipsum dolor sit, amet
-                            consectetur adipisicing elit. Non temporibus corrupti a possimus incidunt vitae nam
-                            exercitationem minima, illo, magni cumque excepturi magnam mollitia eius laudantium,
-                            laborum
-                            id expedita natus?
+                            Nuestros servicios de diseño ayudan a los clientes a acelerar el tiempo de comercialización
+                            de
+                            forma rentable y, al mismo tiempo, minimizan el riesgo. Brindamos servicios de diseño llave
+                            en mano y trabajamos con equipos de diseño del cliente para codiseñar productos.
                         </div>
                     </div>
-                    <h5>Enfocados en la calidad.</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla,
-                        tempore. Deserunt excepturi quas vero.</p>
+                    <h5>El valor que ofrecemos.</h5>
+                    <p>Comercialización más rápida con tecnología avanzada.
+                        Servicios de ciclo de vida de productos específicos de la industria.</p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -128,33 +120,18 @@
                         <img src="https://images.unsplash.com/photo-1522735338363-cc7313be0ae0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80"
                             width="350" height="400" alt="imagen1">
                         <div class="txt">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores veniam non ad
-                            maiores laudantium possimus aspernatur ullam saepe vero autem pariatur cumque voluptas
-                            omnis, reprehenderit totam natus, modi laborum. Tempora. Lorem ipsum dolor sit, amet
-                            consectetur adipisicing elit. Non temporibus corrupti a possimus incidunt vitae nam
-                            exercitationem minima, illo, magni cumque excepturi magnam mollitia eius laudantium,
-                            laborum
-                            id expedita natus?
+                            Nos comprometemos a proteger el medio ambiente y controlar el uso de recursos en la
+                            fabricación y actividades relacionadas. Nuestro sistema de gestión ambiental ayuda a
+                            mantener un entorno seguro y saludable para nuestros empleados, al tiempo que garantiza
+                            nuestro compromiso con la responsabilidad ambiental.
                         </div>
                     </div>
-                    <h5>Enfocados en la calidad.</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla,
-                        tempore. Deserunt excepturi quas vero.</p>
+                    <h5>Hazlo posible, Hazlo mejor.</h5>
+                    <p>Nos esforzamos por ser los más
+                        Tecnológicamente avanzados y confiables.</p>
                 </div>
             </div>
         </div>
-
-        <a class="carousel-control-prev" href="#carouselIndicator" role="button" data- slide="prev">
-
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-
-        <a class="carousel-control-next" href="#carouselIndicator" role="button" data- slide="next">
-
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
     </div>
 </body>
 

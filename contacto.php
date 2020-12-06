@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    if(isset($_SESSION['email']) and $_SESSION['estado'] == 'Autenticado')
+    {
+    }
+    else
+    {  
+           echo "<script> alert('No tienes permiso para entrar a esta pagina'); </script> <br>"?> <a class='nav-link'
+    href='login.php'> inicia Sesion </a> <?php ;
+           exit();
+    }  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,22 +56,30 @@
             </div>
         </nav>
         <div class="contact-box">
-            <h4>Contacto</h4>
-            <form action="">
+            <h4>Reportar un problema</h4>
+            <form action="contacto.php" method = "POST">
                 <label for="">Nombre</label>
-                <input type="text" placeholder="Nombre">
+                <input type="text" name = "name" placeholder="Nombre">
 
-                <label for="">Correo</label>
-                <input type="email" placeholder="Email">
-
-                <label for="">Asunto</label>
-                <input type="text" placeholder="Asunto">
-                
-                <label for="">Mensaje</label>
-                <textarea name="" id="" cols="50" rows="5"></textarea>
+                <label for="">Reporte su problema</label>
+                <input name="problema" id="" cols="55" rows="5"></input>
                 <input type="submit" value="Enviar">
+
             </form>
         </div>
+        <script>
+            <?php
+                
+                $user = $_SESSION['id'];
+                $motivo = $_POST['problema'];
+                       
+                $conexion = mysqli_connect('localhost','root','','mds2');
+                $sql = "insert into reports (IdReport, Reason, FkTechnician, Solved) values ('null','$motivo', '$user', 0)";
+                $res = mysqli_query($conexion,$sql);
+
+
+            ?>
+        </script>
     </div>
 </body>
 </html>
