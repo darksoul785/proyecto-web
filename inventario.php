@@ -62,7 +62,7 @@
     <div class="invent-box">
         <div class="table">
             <caption><b>Material disponible en almacen</b></caption>
-            <table  cellspacing = "5" cellpading = "5"  border = "1">
+            <table  cellpading = "5"  border = "1">
                 <tr>
                     <th>
                         Nombre
